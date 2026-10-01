@@ -1,5 +1,5 @@
 # lasyarchive
 
-Lasya Fauziah
+LASYA FAUZIAH
 
 12402051030031
