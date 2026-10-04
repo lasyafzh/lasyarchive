@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body{
+        background-color: beige;
+    }
+
+    .landscape{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 45px;
+        font-family:monospace;
+        color: darkgreen;
+    }
+
+    h2{
+        font-family:monospace;
+        color: darkgreen;
+    }
+
+    ol{
+        text-align: left;
+
+    }
+
+    form p{
+        text-align: left;
+        font-size: 15px;
+    }
+
+    legend{
+        font-size: 25px;
+    }
+
+    .kartu{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .kartu img{
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }   
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lalamart</title>
+    <link rel="icon" type="image/x-icon" href="/Latihan5A/images/mart.png">
+</head>
+<body>
+    
+<section id="beranda">
+    <img src="/Latihan5A/images/lalamart.jpg" alt="lalamart" class="landscape">
+<p style="text-align: center;"><b>Selamat Datang di Lala Mart! </b></p>
+    <p style="text-align: justify;">Kami menyediakan berbagai sayur mayur dan buah-buahan segar pilihan yang dipasok langsung dari petani lokal. Setiap produk kami pilih dengan teliti agar tetap segar, bergizi, dan berkualitas, dengan harga bersahabat untuk kebutuhan dapur keluarga Anda. <strong>Belanja mudah, hidup sehat dimulai dari sini. </strong></p>
+</section>
+
+<ol type="I">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#katalog">Katalog Produk</a></li>
+        <li><a href="#formulir">Formulir Pemesanan</a></li>
+        <li><a href="#detail">Detail Produk</a></li>
+         <li><a href="#lokasi">Lokasi</a></li>
+
+</ol>
+
+<hr>
+
+<div>
+<section id="katalog">
+<h2 style="font-size: 35px"";">Katalog Produk</h2>
+    <table border="1">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Produk</th> 
+            <th scope="col">Kategori</th> 
+            <th scope="col">Harga</th>
+            <th scope="col">Stok</th>
+        </tr>
+    </thead>
+    
+
+    <tbody>
+        <tr class="produk">
+        <td>1</td>
+        <td>Wortel</td>
+        <td>Sayur</td>
+        <td>10000</td>
+        <td>10</td>
+        </tr>
+
+        <tr>
+        <td>2</td>
+        <td>Jagung</td>
+        <td>Sayur</td>
+        <td>5000</td>
+        <td>15</td>
+        </tr>
+
+        <tr>
+        <td>2</td>
+        <td>Melon</td>
+        <td>Buah</td>
+        <td>15000</td>
+        <td>5</td>
+        </tr>
+
+        <tr>
+        <td>2</td>
+        <td>Durian</td>
+        <td>Buah</td>
+        <td>100000</td>
+        <td>7</td>
+        </tr>
+    </section>
+
+    </tbody>
+    </table>
+</div>
+
+<br>
+<hr>
+
+<div>
+<section id="formulir">
+<h2 style="font-size: 35px;">Formulir Pemesanan</h2>
+    <form>
+    <fieldset>
+            <legend>Identitas</legend>
+
+        <p>
+            <label for="nama">Nama</label><br>
+            <input type="text" id="nama" name="nama" required>
+        </p>
+
+        <p>
+            <label for="no">No. Telepon</label><br>
+            <input type="tel" id="no" name="no" required>
+        </p>
+
+        <p>
+            <label for="alamat">Alamat</label><br>
+            <input type="text" id="alamat" name="alamat" required>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Detail Pesanan</legend>
+
+            <p>
+                <label for="produk">Nama Produk</label><br>
+                <select name="produk" id="produk">
+                    <option value="">Wortel</option>
+                    <option value="">Jagung</option>
+                    <option value="">Melon</option>
+                    <option value="">Durian</option>
+                    
+                </select>
+            </p>
+
+            <p>
+                <label for="jumlah">Jumlah</label>
+                <input type="number" id="jumlah" name="jumlah" min="1" value="1">
+            </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Pembayaran</legend>
+
+        <p>
+            <input type="radio">
+            <label for="Payment">Transfer Bank</label>
+            <br>
+
+            <input type="radio">
+            <label for="Payment">Bayar di Tempat</label>
+            <br>
+
+            <input type="radio">
+            <label for="Payment">QRIS</label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Opsi Pengiriman</legend>
+
+        <p>
+            <input type="radio">
+            <label for="Payment">Ambil ke Toko</label>
+            <br>
+
+            <input type="radio">
+            <label for="Payment">Kurir Toko</label>
+            <br>
+    </fieldset>
+</section>
+    <br>
+
+    <button type="submit">Kirim</button>
+    <button type="reset">Bersihkan</button>
+    </form>
+
+<br>
+<br>
+<hr>
+
+<section id="detail">
+<h2 style="font-size: 35px;">Detail Produk</h2>
+    <div class="kartu">
+        <img src="/Latihan5A/images/wortel.png" alt="wortel">
+
+        <img src="/Latihan5A/images/jagung.png" alt="jagung">
+    
+        <img src="/Latihan5A/images/melon.jpg" alt="melon">
+    
+        <img src="/Latihan5A/images/durian.png" alt="durian">
+    </div>
+</section>
+
+<hr>
+
+<section id="lokasi">
+<h2 style="font-size: 35px;">Lokasi</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.419563470963!2d106.7576553!3d-6.2082606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f73abea1cc23%3A0x8f072392703707bd!2sJl.%20Masjid%20Al-alawiyah%20No.277%2C%20RT.6%2FRW.6%2C%20Srengseng%2C%20Kec.%20Kembangan%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011630!5e0!3m2!1sid!2sid!4v1790671164725!5m2!1sid!2sid" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</section>
+
+</body>
+</html>
