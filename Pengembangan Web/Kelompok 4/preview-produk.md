@@ -12,6 +12,8 @@ Zulfa Azhar Asyifa
 
 # Preview Produk
 
+https://drive.google.com/file/d/1ivRUJ10Vka2Hd28nr7USFdXGoG18-KFC/view?usp=sharing
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c0dfb072-367d-4a3d-8f4e-88bb2bc4297a" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7c476a53-ac4c-47a5-b889-bae575a3c10f" />
