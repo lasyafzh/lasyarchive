@@ -1,0 +1,306 @@
+/* Color Palette
+    Lilac - #E8DDF9 
+    Lavender - #E8DDF9
+    Ice Blue - #E0F4FF
+    Baby Blue - #BFE3F5-
+    Soft Denim - #C5D5E8
+    Baby Pink - #FADADD
+    Soft Pink - #F8C8DC
+    Pastel Mint - #D4F1E8
+    Mint Green - #C7E9D5
+    Pastel Yellow - #FDFD96
+    Butter Yellow - #FFF1B8
+    Ivory - #FFFFF0
+    */
+
+ @font-face {
+    font-family: 'summer';
+    src: url('fonts/summer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --ivory: #FFFFF0;
+    --lilac: #E8DDF9;
+    --pink: #F8C8DC;
+    --biru: #BFE3F5;
+    --mint: #C7E9D5;
+    --butter: #FFF1B8;
+    --denim: #C5D5E8;
+    --ink: #3d3550;
+}
+
+/* Text CSS */
+body {
+    margin: 0;
+    font-family: 'summer';
+    font-weight: bold;
+    font-style: normal;
+    color: var(--ink);
+    background-color: #ffffff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--lilac);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: #F8C8DC 2px solid;
+    padding: 0px;
+    outline-style: dotted;
+    outline-color: #8E6BBF;
+}
+
+header .logo {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 5px;
+}
+
+header .jargon {
+    color: #B24C85;
+    font-size: 25px;
+    padding: 0 0 5px 0;
+    
+}
+
+header ul.kat a{
+    text-decoration: none;
+    margin: 8px 22px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #FFC9DC;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+header ul.kat a:visited {
+  color: #3d3550;        
+  text-decoration: none;
+}
+
+header ul.kat a:hover {
+  background: #3d3550;
+  color: #F6DDE1;
+  transform: translateY(-2px);
+}
+
+header ul.kat a:active {
+  transform: translateY(0); 
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 20px;
+    color: #F6DDE1;
+    font-size: 25px;
+}
+
+
+/* CSS Text Dika */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'summer', sans-serif;
+    background-color: #fffaf7;
+    color: #493832;
+    line-height: 1.6;
+}
+
+
+body {
+    font-family: 'summer', Times, serif;
+    margin: 0%;
+    padding: 20px;
+}
+
+ul {
+    padding-left: 20px;  
+}
+
+th, td {
+    text-align: left;
+    padding: 8px 14px;
+}
+
+th:first-child, td:first-child {
+    padding-left: 0;
+}
+
+header .jargon {
+    text-transform: capitalize; 
+    text-decoration-line: underline;
+    text-decoration-style: wavy; 
+    text-decoration-color: #B24C85;
+}
+
+p {
+    text-indent: 30px;        
+    word-spacing: 2px;        
+}
+
+h1, h2, .category-title {
+    text-shadow: 2px 2px 4px rgba(142, 107, 191, 0.4);
+}
+
+.category-title {
+    font-family: 'summer', sans-serif;
+    color: #B24C85;
+    font-size: 28px;
+}
+
+.teks-deskripsi {
+    text-indent: 30px;        
+    word-spacing: 2px;
+    text-align: justify;      
+    text-align-last: left;    
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+
+.card {
+    display: inline-block;
+    width: 200px;
+    background-color: #FADADD;
+    border: 1px solid #8E6BBF;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 0 4px 8px rgba(#FADADD,#BFE3F5,#FADADD,#BFE3F5);
+    transition: transform 0.3s;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(#FADADD,#8E6BBF,#FADADD,#8E6BBF);
+}
+
+
+.pict {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #FADADD;
+}
+
+.pict img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Punya Tya */
+
+a {
+    text-decoration: none;
+}
+
+ul.panduan {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 16px 0 32px;
+    padding: 10px 28px;
+    background: #FADADD;
+    border: 2px solid #8E6BBF;
+    border-radius: 24px;
+    box-shadow: 6px 6px 16px #3d3550;
+}
+ 
+ul.panduan li {
+  display: list-item;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 8px;
+  line-height: 1.5;
+  border-radius: 12px;
+}
+
+ul.panduan li + li {
+  border-top: 2px dotted rgba(142, 107, 191, 0.5);
+  border-radius: 0 0 12px 12px;
+}
+
+ul.panduan li:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(6px);
+}
+
+
+table, th, td {
+  border: 1px solid #E8DDF9 ;
+}
+
+table.tables {
+    margin: 16px 0 32px;
+    padding: 8px 28px;
+    background: #FADADD;
+    border: 1px solid #8E6BBF;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px #3d3550;
+}
+
+
+
+/* Footer */
+.footer {
+  padding: 60px 8% 20px 8%;
+  background-color: #E8DDF9;
+  color: #B24C85;
+  border-top: 6px double #FADADD;
+}
+.tabel-footer { table-layout: fixed; }
+.kolom-footer {
+  width: 33%;
+  padding: 0 30px 0 0;
+  vertical-align: top;
+  font-size: 16px;
+}
+.kolom-footer h3 {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #B24C85;
+  font-size: 24px;
+  font-style: italic;
+  color: #B24C85;
+}
+.kolom-footer p { margin: 10px 0; }
+.footer a { color: #B24C85; }
+.kontak li { margin-bottom: 4px; }
+.hak-cipta {
+  margin: 40px 0 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #B24C85;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.terang{
+    background-color: #FADADD;
+    width: fit-content;
+    text-decoration: none;
+}
+.terang:hover {background-color: #C5D5E8; text-decoration: underline;}
+.footer a:hover {color:black}
+/*Batas Footer/*
