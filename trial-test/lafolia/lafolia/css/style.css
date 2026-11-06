@@ -1,0 +1,76 @@
+:root{--blue:#0a33a8;--cream:#f0ece6;--line:rgba(240,236,230,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--blue);color:var(--cream);font-family:'Archivo',Arial,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.script{font-family:'Pinyon Script',cursive;font-weight:400}
+:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+
+/* ---------- Halaman entri ---------- */
+.entry{min-height:100vh;display:grid;place-content:center;justify-items:center;text-align:center;padding:2rem 1rem 9rem;transition:opacity .6s}
+.entry.leave{opacity:0}
+.entry p{font-size:1.4rem}
+.entry h1{font-size:clamp(4rem,13vw,9rem);line-height:1}
+.start{margin-top:2.5rem;background:none;border:1px solid var(--cream);color:var(--cream);padding:.85rem 2.4rem;border-radius:999px;font:inherit;font-size:1rem;cursor:pointer;transition:background .2s,color .2s}
+.start:hover{background:var(--cream);color:var(--blue)}
+.mini{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:flex-end;gap:6px;pointer-events:none}
+.mini i{display:block;width:22px;background:var(--cream);transform-origin:bottom;animation:rise .9s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes rise{from{transform:scaleY(0)}}
+
+/* ---------- Halaman utama ---------- */
+.side{position:absolute;top:2rem;left:3rem;display:grid;gap:1.4rem}
+.side .logo{font-size:1.9rem;line-height:1}
+.side nav{display:grid;gap:.15rem;text-transform:uppercase;font-size:1.05rem}
+.side nav a:hover,.side nav a[aria-current]{text-decoration:underline;text-underline-offset:4px}
+.top{text-align:center;padding-top:2.5rem}
+.top p{font-size:1.9rem}
+.top h1{font-size:clamp(4rem,9vw,7rem);line-height:.95}
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 2rem;margin:2rem 1rem 3rem;font-size:.9rem}
+.group{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.group>span{font-size:1rem;margin-right:.3rem}
+.chip{background:none;border:1px solid var(--line);color:var(--cream);padding:.3rem .9rem;font:inherit;cursor:pointer;border-radius:999px}
+.group.lang .chip{border-radius:2px;border-color:var(--cream)}
+.chip[aria-pressed=true]{background:var(--cream);color:var(--blue);border-color:var(--cream)}
+.shelf-wrap{overflow-x:auto;padding:0 1rem}
+.shelf{display:flex;align-items:flex-end;justify-content:center;gap:7px;min-width:max-content;margin:0 auto;padding-top:40px;border-bottom:1px solid var(--cream);width:max-content;max-width:none}
+.shelf-line{border-bottom:1px solid var(--cream);margin:0 1rem 3rem}
+.spine{background:var(--cream);color:var(--blue);border:0;height:var(--h);width:var(--w);transform:rotate(var(--r));transform-origin:bottom center;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 0;cursor:pointer;transition:transform .25s,opacity .3s}
+.spine span{writing-mode:vertical-rl;white-space:nowrap;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:calc(var(--w) * .42)}
+.spine .au{font-size:calc(var(--w) * .34);letter-spacing:.04em;text-transform:uppercase;font-family:'Archivo',sans-serif;font-weight:500}
+.spine:hover,.spine:focus-visible{transform:rotate(var(--r)) translateY(-14px)}
+.spine.dim{opacity:.18;pointer-events:none}
+.empty{text-align:center;margin:1rem 0 0;min-height:1.5rem}
+
+/* ---------- Detail buku ---------- */
+dialog{margin:auto;border:0;background:var(--cream);color:var(--blue);padding:2rem 2.2rem;width:min(92vw,420px)}
+dialog::backdrop{background:rgba(5,20,70,.7)}
+dialog h2{font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1.1}
+dialog .by{margin:.3rem 0 1.2rem}
+dialog dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.2rem;margin-bottom:1.2rem}
+dialog dt{opacity:.7}
+dialog .note{line-height:1.55;margin-bottom:1.5rem}
+dialog button{background:var(--blue);color:var(--cream);border:0;padding:.6rem 1.6rem;font:inherit;border-radius:999px;cursor:pointer}
+
+/* ---------- Tentang ---------- */
+.about{max-width:520px;margin:0 auto;padding:4rem 1.5rem;line-height:1.7;text-align:center}
+.about h1{font-size:4.5rem;margin-bottom:1rem}
+
+@media (max-width:800px){
+  .side{position:static;padding:1.5rem;grid-auto-flow:column;align-items:center;justify-content:space-between}
+  .side nav{grid-auto-flow:column;gap:1rem;font-size:.85rem}
+  .top{padding-top:.5rem}
+  .shelf{margin:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- Sidebar dengan dropdown ---------- */
+.side nav{gap:.35rem}
+.dd summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.5rem;width:max-content}
+.dd summary::-webkit-details-marker{display:none}
+.dd summary::after{content:"+";font-size:1rem;line-height:1}
+.dd[open] summary::after{content:"–"}
+.dd summary:hover{text-decoration:underline;text-underline-offset:4px}
+.dd div{display:grid;gap:.15rem;padding:.4rem 0 .4rem 1rem;margin-left:.2rem;border-left:1px solid var(--line);font-size:.9rem}
+@media (max-width:800px){
+  .side{grid-auto-flow:row;justify-content:start}
+  .side nav{grid-auto-flow:row;gap:.35rem;font-size:1rem}
+}

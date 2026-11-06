@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lafolia · Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Cormorant+Garamond:wght@600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <p>Welcome to</p>
+  <h1 class="script">Lafolia</h1>
+  <p id="section-title"></p>
+</header>
+
+<section class="filters" aria-label="Filter bahasa">
+  <div class="group lang" id="f-lang"><span>LANGUAGE</span></div>
+</section>
+
+<div class="shelf-wrap"><div class="shelf" id="shelf"></div></div>
+<p class="empty" id="empty"></p>
+
+<dialog id="modal">
+  <h2 id="m-title"></h2>
+  <p class="by" id="m-author"></p>
+  <dl>
+    <dt>Status</dt><dd id="m-status"></dd>
+    <dt>Bahasa</dt><dd id="m-lang"></dd>
+    <dt>Rating</dt><dd id="m-rate"></dd>
+  </dl>
+  <p class="note" id="m-note"></p>
+  <button id="m-close">Tutup</button>
+</dialog>
+
+<script src="js/nav.js"></script>
+<script src="js/books.js"></script>
+<script src="js/shelf.js"></script>
+</body>
+</html>
